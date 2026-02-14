@@ -1,0 +1,86 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: white;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-weight: 600;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f5f3;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.btn {
+    padding: 10px 25px;
+    background: teal;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* SECTION */
+.section {
+    padding: 60px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+/* CARDS */
+.Projects-container,
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
