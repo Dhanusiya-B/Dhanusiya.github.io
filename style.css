@@ -1,59 +1,39 @@
-/* =======================
-   RESET
-======================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =======================
-   BODY BACKGROUND
-======================= */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
 }
 
-/* Grid overlay for premium look */
-body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    z-index: -1;
-}
-
-/* =======================
-   HEADER / NAVBAR
-======================= */
+/* NAVBAR */
 header {
-    position: sticky;
-    top: 0;
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 15px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 60px;
+    background: rgba(15, 23, 42, 0.95);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
-header h1 {
+.logo {
     color: #38bdf8;
+    font-weight: 600;
 }
 
 nav a {
-    margin-left: 20px;
-    text-decoration: none;
     color: #e2e8f0;
-    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -61,111 +41,162 @@ nav a:hover {
     color: #38bdf8;
 }
 
-/* =======================
-   SECTIONS
-======================= */
-section {
-    padding: 80px 10%;
-}
-
-/* Glass effect container */
-.container {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* =======================
-   HEADINGS
-======================= */
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #38bdf8;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    background: #38bdf8;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-}
-
-/* =======================
-   BUTTONS
-======================= */
-button,
-.btn-resume {
-    display: inline-block;
-    background: #38bdf8;
-    color: #0f172a;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-button:hover,
-.btn-resume:hover {
-    background: #0ea5e9;
-    transform: translateY(-2px);
-}
-
-/* =======================
-   ABOUT SECTION
-======================= */
-.about-container {
+/* HERO */
+.hero {
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
-.about-image img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 3px solid #38bdf8;
-    object-fit: cover;
-}
-
-.about-content {
-    flex: 1;
-}
-
-/* =======================
-   TEXT STYLING
-======================= */
-p {
+.hero h1 {
+    font-size: 48px;
     margin-bottom: 10px;
 }
 
-strong {
+.hero p {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 25px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* SECTION COMMON */
+.section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
     color: #38bdf8;
 }
 
-/* =======================
-   RESPONSIVE DESIGN
-======================= */
+/* ABOUT */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h3 {
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    margin-bottom: 10px;
+    color: #cbd5f5;
+}
+
+/* RESUME */
+.resume-box {
+    margin-top: 20px;
+}
+
+.btn-resume {
+    padding: 12px 30px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-resume:hover {
+    background: #16a34a;
+}
+
+/* PROJECTS */
+.projects-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(56,189,248,0.2);
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* CONTACT */
+#contact p {
+    margin: 10px 0;
+    color: #cbd5f5;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
     .about-container {
         flex-direction: column;
         text-align: center;
     }
 
-    header {
+    .projects-container {
         flex-direction: column;
-    }
-
-    nav {
-        margin-top: 10px;
+        align-items: center;
     }
 }
